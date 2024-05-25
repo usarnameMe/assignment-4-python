@@ -1,23 +1,23 @@
 class Student:
-    university = "SkillWill University"
+    university: str = "SkillWill University"
 
-    def __init__(self, name, grade, age):
-        self.name = name
-        self.grade = grade
-        self.age = age
+    def __init__(self, name: str, grade: int, age: int) -> None:
+        self.name: str = name
+        self.grade: int = grade
+        self.age: int = age
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Name: {self.name}, Age: {self.age}, Grade: {self.grade}"
 
     @property
-    def is_passing(self):
+    def is_passing(self) -> bool:
         return self.grade > 60
 
-    def increase_grade(self, amount):
+    def increase_grade(self, amount: int) -> None:
         self.grade += amount
 
 
-student1 = Student(name="Gvantsa", grade=55, age=26)
+student1: Student = Student(name="Gvantsa", grade=55, age=26)
 
 print(student1)
 print(student1.is_passing)
